@@ -7,3 +7,4 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://daldart-task.firebaseio.com',
 });
+
