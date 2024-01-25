@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import { httpStatusText } from './utils/httpStatusText';
 import { postsRoute } from './routes/postsRoute';
 
-const app = express();
+export const app = express();
 app.use(express.json());
 
 dotenv.config();
