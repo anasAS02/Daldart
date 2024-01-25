@@ -8,7 +8,7 @@ import { PuffLoader } from "react-spinners";
 import Link from "next/link";
 
 export default function Posts(){
-    const { listing, isLoading, setIsLoading } = useStatusContext();
+    const { listing, isLoading, setIsLoading, setPostsArr } = useStatusContext();
     const [posts, setPosts] = useState<any[]>([]);
     const [limit, setLimit] = useState<number>(8);
     const [page, setPage] = useState<number>(1);
@@ -19,6 +19,7 @@ export default function Posts(){
             const res = await axios.post('http://localhost:4000/api/posts/', {listing: listing});
             const data = res.data.data;
             setPosts(data);
+            setPostsArr(data);
         }catch(err: any){
             console.log(err.response.data.message);
         }finally{
