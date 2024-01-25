@@ -42,6 +42,9 @@ Posts: Manages currently fetched posts for Navbar component and search functiona
 # Usage
 Clone the repository.
 Install dependencies using npm install.
+
 Run the backend server with npm run start in the 'server' directory.
+
 Test the backend server with npm test in the 'server' directory.
+
 Run the frontend with npm run dev in the 'client' directory.
